@@ -51,7 +51,16 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<span class="date">April 25, 2017</span>
+									<p id="datetime"></p>
+									<script>
+									// Get current date and time
+									var now = new Date();
+									var datetime = now.toLocaleString();
+
+									// Insert date and time into HTML
+									
+									</script>
+									<span class="date">document.getElementById("datetime").innerHTML = datetime</span>
 									<h1>This is a<br />
 									Generic Page</h1>
 									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
