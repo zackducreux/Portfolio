@@ -1,51 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image and Text Layout</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Zackary Ducreux Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Additional styling for the image and text layout */
+			.content-container {
+				display: flex;
+				align-items: center;
+			}
 
-    .content-container {
-      display: flex;
-      align-items: center;
-    }
+			.image-container {
+				margin-right: 20px;
+				text-align: center;
+			}
 
-    .image-container {
-      margin-right: 20px;
-      text-align: center;
-    }
+			.image-container img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+				margin: 0 auto;
+			}
 
-    .image-container img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
+			.text-container {
+				flex-grow: 1;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-    .text-container {
-      flex-grow: 1;
-    }
-  </style>
-</head>
-<body>
+		<!-- Wrapper -->
+		<div id="wrapper" class="fade-in">
 
-  <div class="content-container">
-    <div class="image-container">
-      <img src="./images/Logo/urba.png" alt="Your Image">
-    </div>
-    <div class="text-container">
-      <p>Your text goes here.</p>
-    </div>
-  </div>
+			<!-- Intro -->
+			<div id="intro">
+				<h1>Zackary Ducreux<br />
+					Portfolio</h1>
+				<p>Biostasticien / Data Scientist / Data Analyst</a>.</p>
+				<ul class="actions">
+					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+				</ul>
+			</div>
 
-</body>
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">Portfolio</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">About me</a></li>
+					<li><a href="generic.html">Professionnal experiences</a></li>
+					<li class="active"><a href="elements.html">Education experiences</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.instagram.com/zack_dcx/?hl=fr" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/zackducreux?tab=repositories" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Featured Post -->
+				<article class="post featured content-container">
+					<div class="image-container">
+						<img src="images/pic01.jpg" alt="Education Image">
+					</div>
+					<div class="text-container">
+						<header class="major">
+							<span id="currentDate" class="date"></span>
+							<h3><a href="test_image.html">Education experiences</a></h3>
+							<p>Aenean ornare veli varius enim ullamcorper proin aliquam<br />
+								facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
+								amet nullam sed etiam veroeros.</p>
+						</header>
+						<ul class="actions special">
+							<li><a href="test_image.html" class="button large">Full Story</a></li>
+						</ul>
+					</div>
+				</article>
+
+				<!-- Posts -->
+				<section class="posts">
+					<!-- Add your existing posts here -->
+				</section>
+
+				<!-- Footer -->
+				<footer>
+					<div class="pagination">
+						<!--<a href="#" class="previous">Prev</a>-->
+						<a href="#" class="page active">1</a>
+						<a href="#" class="page">2</a>
+						<a href="#" class="page">3</a>
+						<span class="extra">&hellip;</span>
+						<a href="#" class="page">8</a>
+						<a href="#" class="page">9</a>
+						<a href="#" class="page">10</a>
+						<a href="#" class="next">Next</a>
+					</div>
+				</footer>
+
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<!-- Add your existing footer content here -->
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Script to set the current date -->
+		<script>
+			function getCurrentDate() {
+				const options = { year: 'numeric', month: 'long', day: 'numeric' };
+				return new Date().toLocaleDateString('en-US', options);
+			}
+
+			document.getElementById('currentDate').textContent = getCurrentDate();
+		</script>
+
+	</body>
 </html>
