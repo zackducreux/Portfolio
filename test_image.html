@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image and Text Layout</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .content-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .image-container {
+      margin-right: 20px;
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .text-container {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content-container">
+    <div class="image-container">
+      <img src="./images/Logo/urba.png" alt="Your Image">
+    </div>
+    <div class="text-container">
+      <p>Your text goes here.</p>
+    </div>
+  </div>
+
+</body>
+</html>
