@@ -73,9 +73,14 @@ input, select, textarea {
 }
 
 
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .column {
-    column-count: 4; /* Nombre de colonnes */
-    column-gap: 20px; /* Espace entre les colonnes */
+    flex: 1;
+    margin: 0 10px;
 }
 
 /* Basic */
