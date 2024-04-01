@@ -74,7 +74,7 @@ input, select, textarea {
 
 
 .column {
-    column-count: 3; /* Nombre de colonnes */
+    column-count: 2; /* Nombre de colonnes */
     column-gap: 20px; /* Espace entre les colonnes */
 }
 
