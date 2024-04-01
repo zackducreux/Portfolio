@@ -72,6 +72,12 @@ input, select, textarea {
 	appearance: none;
 }
 
+
+.column {
+    column-count: 3; /* Nombre de colonnes */
+    column-gap: 20px; /* Espace entre les colonnes */
+}
+
 /* Basic */
 
 	@-ms-viewport {
