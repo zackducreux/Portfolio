@@ -12,8 +12,59 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map Highlight</title>
+    <style>
+        .country {
+            fill: grey;
+        }
+        .highlight {
+            fill: blue;
+        }
+    </style>
 	</head>
 	<body class="is-preload">
+
+	    <svg version="1.1" id="world-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 1001" style="enable-background:new 0 0 2000 1001;" xml:space="preserve">
+			<style type="text/css">
+				.st0{fill:#E3E3E3;}
+				.st1{fill:#D8D8D8;}
+				.st2{fill:#C8C8C8;}
+				.st3{fill:#CCCCCC;}
+				.st4{fill:#C4C4C4;}
+				.st5{fill:#BFBFBF;}
+				.st6{fill:#B5B5B5;}
+				.st7{fill:#B8B8B8;}
+				.st8{fill:#AAAAAA;}
+				.st9{fill:#A0A0A0;}
+				.st10{fill:#959595;}
+				.st11{fill:#999999;}
+				.st12{fill:#8B8B8B;}
+				.st13{fill:#808080;}
+				.st14{fill:#737373;}
+				.st15{fill:#666666;}
+				.st16{fill:#666666;}
+				.st17{fill:#5C5C5C;}
+				.st18{fill:#4D4D4D;}
+				.st19{fill:#404040;}
+				.st20{fill:#333333;}
+			</style>
+			<g id="Layer_1">
+				<!-- Other countries -->
+				<path class="country" d="M190,80 h30 v30 h-30 z" id="country-template" />
+				<!-- Spain -->
+				<path class="highlight" d="M200 400 L230 400 L230 430 L200 430 Z" id="spain" />
+				<!-- Portugal -->
+				<path class="highlight" d="M180 400 L200 400 L200 430 L180 430 Z" id="portugal" />
+				<!-- France -->
+				<path class="highlight" d="M230 370 L260 370 L260 400 L230 400 Z" id="france" />
+				<!-- Greece -->
+				<path class="highlight" d="M300 450 L330 450 L330 480 L300 480 Z" id="greece" />
+				<!-- Placeholder for other countries - you can add more countries here if needed -->
+			</g>
+		</svg>
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
