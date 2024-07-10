@@ -5,29 +5,34 @@
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html lang="fr">
-<head>
-    <link rel="icon" type="image/jpg" href="images/adobe-portfolio-cles-en-main.jpg" />
-    <title>Zackary Ducreux Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <script>
-        function changeLanguage(lang) {
-            const elements = document.querySelectorAll('[data-lang]');
-            elements.forEach(element => {
-                element.style.display = 'none';
-            });
-            const selectedElements = document.querySelectorAll(`[data-lang="${lang}"]`);
-            selectedElements.forEach(element => {
-                element.style.display = 'block';
-            });
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            changeLanguage('fr'); // default to French
-        });
-    </script>
-</head>
+	<head>
+		<link rel="icon" type="image/jpg" href="images/adobe-portfolio-cles-en-main.jpg" />
+		<title>Zackary Ducreux Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			function changeLanguage(lang) {
+				const elements = document.querySelectorAll('[data-lang]');
+				elements.forEach(element => {
+					if (element.getAttribute('data-lang') === lang) {
+						element.style.display = 'block';
+					} else {
+						element.style.display = 'none';
+					}
+				});
+				// Store selected language in local storage
+				localStorage.setItem('selectedLanguage', lang);
+			}
+	
+			document.addEventListener('DOMContentLoaded', () => {
+				// Retrieve selected language from local storage
+				const selectedLang = localStorage.getItem('selectedLanguage') || 'fr';
+				changeLanguage(selectedLang); // Apply stored language or default to French
+			});
+		</script>
+	</head>
 <body class="is-preload">
 
     <!-- Wrapper -->
@@ -64,13 +69,13 @@
             <ul class="icons">
 				<li>
 					<a href="javascript:void(0);" onclick="changeLanguage('en')" data-lang="fr">
-						<img src="images/FR2.png" alt="English" style="width: 16px; height: 16px; vertical-align: middle;" />
+						<img src="images/EN2.png" alt="English" style="width: 16px; height: 16px; vertical-align: middle;" />
 						English version
 					</a>
 				</li>
 				<li>
 					<a href="javascript:void(0);" onclick="changeLanguage('fr')" data-lang="en" style="display:none;">
-						<img src="images/EN2.png" alt="Français" style="width: 16px; height: 16px; vertical-align: middle;" />
+						<img src="images/FR2.png" alt="Français" style="width: 16px; height: 16px; vertical-align: middle;" />
 						Version française
 					</a>
 				</li>
@@ -182,10 +187,15 @@
                     <a class="image fit"><img src="images/rugby.JPG" alt="" /></a>
                     <p data-lang="fr">Sport de combat mais surtout d'équipe, 13 ans de rugby en club m'ont permis de mieux comprendre la vision collective pour atteindre son but (plutôt essai ducoup).<br /><br />
                         <small>2007 : CASE (Club athlétique de Saint-Étienne)<br />
-                        2008-2017 : HPR (Haut Pilat Rugby)</small></p>
-                    <p data-lang="en" style="display:none;">A combat sport but above all a team sport, 13 years of rugby in a club have allowed me to better understand the collective vision to achieve its goal (rather a try then).<br /><br />
+                        2008-2017 : HPR (Haut Pilat Rugby)<br />
+						2015 : Section Rugby à Andrézieux-Bouthéon<br />
+						2017-2020 : Coach-joueur à l'EPF Engineering School<br />
+						Maintenant fervant supporter des bleus de l'Équipe de France<br /></small></p>
+                    <p data-lang="en" style="display:none;">A harsh sport but above all a team sport, 13 years of rugby in a club have allowed me to better understand the collective vision to achieve its goal (rather a try then).<br /><br />
                         <small>2007 : CASE (Athletic Club of Saint-Étienne)<br />
-                        2008-2017 : HPR (Haut Pilat Rugby)</small></p>
+                        2008-2017 : HPR (Haut Pilat Rugby)<br />				
+						2017-2020 : Coach-player in EPF Engineering School<br />
+						French national team fan from always and forever<br /></small></p>
                 </article>
 				<article>
 					<header>
