@@ -1,57 +1,88 @@
 <!DOCTYPE HTML>
 <!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="fr">
 	<head>
 		<link rel="icon" type="image/jpg" href="images/adobe-portfolio-cles-en-main.jpg" />
-		<title data-lang="fr">Zackary Ducreux Portfolio</title>
-		<title data-lang="en" style="display:none;">Zackary Ducreux Portfolio</title>
+		<title>Zackary Ducreux Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			function changeLanguage(lang) {
+				const elements = document.querySelectorAll('[data-lang]');
+				elements.forEach(element => {
+					if (element.getAttribute('data-lang') === lang) {
+						element.style.display = 'block';
+					} else {
+						element.style.display = 'none';
+					}
+				});
+				// Store selected language in local storage
+				localStorage.setItem('selectedLanguage', lang);
+			}
+	
+			document.addEventListener('DOMContentLoaded', () => {
+				// Retrieve selected language from local storage
+				const selectedLang = localStorage.getItem('selectedLanguage') || 'fr';
+				changeLanguage(selectedLang); // Apply stored language or default to French
+			});
+		</script>
 	</head>
-	<body class="is-preload">
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1 data-lang="fr">Zackary Ducreux<br />Portfolio</h1>
-						<h1 data-lang="en" style="display:none;">Zackary Ducreux<br />Portfolio</h1>
-						<p data-lang="fr">Biostatisticien / Data Scientist / Data Analyst</p>
-						<p data-lang="en" style="display:none;">Biostatistician / Data Scientist / Data Analyst</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly" data-lang="fr">Continue</a></li>
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly" data-lang="en" style="display:none;">Continue</a></li>
-						</ul>
-					</div>
+        <!-- Intro -->
+        <div id="intro">
+            <h1 data-lang="fr">Zackary Ducreux<br />Portfolio</h1>
+            <h1 data-lang="en" style="display:none;">Zackary Ducreux<br />Portfolio</h1>
+            <p data-lang="fr">Biostatisticien / Data Scientist / Data Analyst</p>
+            <p data-lang="en" style="display:none;">Biostatistician / Data Scientist / Data Analyst</p>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly" data-lang="fr">Portfolio</a></li>
+                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly" data-lang="en" style="display:none;">Portfolio</a></li>
+            </ul>
+        </div>
 
-				<!-- Header -->
-					<header id="header">
-						<a class="logo" data-lang="fr">Portfolio</a>
-						<a class="logo" data-lang="en" style="display:none;">Portfolio</a>
-					</header>
+        <!-- Header -->
+        <header id="header">
+            <a class="logo" data-lang="fr">Portfolio</a>
+            <a class="logo" data-lang="en" style="display:none;">Portfolio</a>
+        </header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html" data-lang="fr">À propos de moi</a></li>
-							<li><a href="index.html" data-lang="en" style="display:none;">About me</a></li>
-							<li><a href="generic.html" data-lang="fr">Expériences professionnelles</a></li>
-							<li><a href="generic.html" data-lang="en" style="display:none;">Professional experiences</a></li>
-							<li class="active"><a href="elements.html" data-lang="fr">Expériences éducatives</a></li>
-							<li class="active"><a href="elements.html" data-lang="en" style="display:none;">Education experiences</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.instagram.com/zack_dcx/?hl=fr" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/zackducreux?tab=repositories" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html" data-lang="fr">Mon profil</a></li>
+                <li><a href="index.html" data-lang="en" style="display:none;">Profile</a></li>
+                <li><a href="generic.html" data-lang="fr">Expériences professionnelles</a></li>
+                <li><a href="generic.html" data-lang="en" style="display:none;">Professional experiences</a></li>
+                <li class="active"><a href="elements.html" data-lang="fr">Enseignement supérieur</a></li>
+                <li class="active"><a href="elements.html" data-lang="en" style="display:none;">Scholar</a></li>
+            </ul>
+            <ul class="icons">
+				<li>
+					<a href="javascript:void(0);" onclick="changeLanguage('en')" data-lang="fr">
+						<img src="images/EN2.png" alt="English" style="width: 16px; height: 16px; vertical-align: middle;" />
+						English version
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" onclick="changeLanguage('fr')" data-lang="en" style="display:none;">
+						<img src="images/FR2.png" alt="Français" style="width: 16px; height: 16px; vertical-align: middle;" />
+						Version française
+					</a>
+				</li>
+                <li><a href="https://www.instagram.com/zack_dcx/?hl=fr" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/zackducreux?tab=repositories" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
 
 				<!-- Main -->
 					<div id="main">
