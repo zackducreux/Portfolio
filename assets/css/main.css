@@ -79,22 +79,29 @@ input, select, textarea {
 }
 
 .download-button {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 300px; /* 3 times longer than its height */
     height: 100px;
-    line-height: 100px; /* Centers the text vertically */
     border: 2px solid white;
     color: white;
     text-decoration: none;
-    text-align: center;
     font-size: 16px;
-    padding: 0;
     margin-bottom: 40px; /* Adds space between the button and the next element */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .download-button:hover {
     background-color: white;
+    color: black;
+}
+
+.download-button .label {
+    color: white;
+}
+
+.download-button:hover .label {
     color: black;
 }
 
