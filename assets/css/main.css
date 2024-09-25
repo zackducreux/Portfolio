@@ -79,11 +79,17 @@ input, select, textarea {
 }
 
 .download-button {
+    display: inline-block;
+    width: 300px; /* 3 times longer than its height */
+    height: 100px;
+    line-height: 100px; /* Centers the text vertically */
     border: 2px solid white;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 40px; /* Adds space between the button and the next element */
     transition: background-color 0.3s ease;
 }
 
@@ -91,6 +97,7 @@ input, select, textarea {
     background-color: white;
     color: black;
 }
+
 
 /* Basic */
 
